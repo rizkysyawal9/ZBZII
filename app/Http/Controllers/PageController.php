@@ -14,7 +14,7 @@ class PageController extends Controller
      */
     public function home()  
     {
-        $products = Product::inRandomOrder()->take(4)->get();
+        $products = Product::orderBy('updated_at','desc')->take(4)->get();
         return view('pages.home')->with('products', $products);
     }
     public function ProductType()

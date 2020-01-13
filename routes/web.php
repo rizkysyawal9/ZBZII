@@ -14,7 +14,8 @@
 Auth::routes();
 
 //Route untuk view halaman Utama
-Route::get('/', 'PageController@home');
+Route::get('/', 'PageController@home')->name('home');
+Route::post('/', 'CheckoutController@store')->name('checkout.store');
 
 //Route untuk View Kategori Produk
 Route::get('/Daily', 'DailyController@category')->name('daily.index');
@@ -24,6 +25,7 @@ Route::get('/Casual', 'CasualController@category');
 Route::get('/Casual/{slug}', 'CasualController@show');
 Route::get('/Party', 'PartyController@category');
 Route::get('/Party/{slug}', 'PartyController@show');
+
 
 //Route untuk ke view Cart
 Route::get('/cart', 'CartController@show')->name('cart.index');
@@ -35,17 +37,31 @@ Route::get('/empty', function(){
     return redirect('/cart');
 });
 
+//Route For Admin 
+Route::get('/zeener','Zeeners@index');
+/*Route::get('/zeener/create', 'Zeeners@create')->name('admin.create');
+Route::get('/zeener/{id}/edit', 'Zeeners@edit')->name('admin.edit');
+Route::post('/zeener','Zeeners@store')->name('admin.store');
+Route::put('/zeener/{id}', 'Zeeners@update')->name('admin.update');
+Route::delete('/zeener/{id}','Zeeners@destroy')->name('admin.delete');*/
+
 //Route::get('/single-product', 'PageController@single_product');
 /*Route::get('/cart', 'PageController@cart')->name('cart');
 */Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+Route::get('/admin', 'Zeeners@index')->name('admin.home');
+Route::get('/admin/create', 'Zeeners@create')->name('admin.create');
+Route::get('/admin/{id}/edit', 'Zeeners@edit')->name('admin.edit');
+Route::post('/admin','Zeeners@store')->name('admin.store');
+Route::put('/admin/{id}', 'Zeeners@update')->name('admin.update');
+Route::delete('/admin/{id}','Zeeners@destroy')->name('admin.delete');
 
 
 
 // admin functionality
-Route::GET('admin/dashboard', 'AdminController@dashboard');
+/*Route::GET('admin/dashboard', 'AdminController@dashboard');
 Route::GET('admin/logout', 'Admin\LoginController@logout');
 Route::GET('admin', 'Admin\LoginController@showLoginForm')->name('admin.login');
-Route::POST('admin', 'Admin\LoginController@login');
+Route::POST('admin', 'Admin\LoginController@login');*/
 
 
 //Route::get('/ProductType', 'PageController@ProductType')->name('ProductType');

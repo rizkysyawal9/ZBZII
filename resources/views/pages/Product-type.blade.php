@@ -49,7 +49,8 @@
                         <div class="col-lg-4 col-sm-6">
                             <div class="single_category_product">
                                 <div class="single_category_img">
-                                    <img src="img/blazer-product.jpg" href="/single-product" alt="">
+                                <img src="{{ asset('storage/product/'. $product->featured_img) }}" alt="" width="150" href="/single-product">
+                                  <!--  <img src="img/blazer-product.jpg"  alt="">-->
                 
                                         <div class="category_product_text">
                                             <a href="{{$product->type}}/{{$product->slug}}">

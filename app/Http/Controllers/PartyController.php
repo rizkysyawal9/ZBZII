@@ -9,7 +9,7 @@ class PartyController extends Controller
 {
     public function category(){
         $name = "Party Dress Category";
-        $products = Product::inRandomOrder()->where('type','Party')->take(14)->get();
+        $products = Product::orderBy('updated_at','desc')->where('type','Party')->take(14)->get();
         return view('pages.Product-type')->with(
             [
                 'products' => $products,

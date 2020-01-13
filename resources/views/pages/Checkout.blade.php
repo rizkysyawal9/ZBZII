@@ -28,13 +28,13 @@
             <div class="row">
               <div class="col-lg-8">
                 <h3>Billing Details</h3>
-                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                <form class="row contact_form" action="{{ route('checkout.store') }}" method="post" novalidate="novalidate">
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="first" name="name" />
+                    <input type="text" class="form-control" id="first" name="first" />
                     <span class="placeholder" data-placeholder="First name"></span>
                   </div>
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="last" name="name" />
+                    <input type="text" class="form-control" id="last" name="last" />
                     <span class="placeholder" data-placeholder="Last name"></span>
                   </div>
                   <div class="col-md-6 form-group p_star">
@@ -54,15 +54,20 @@
                     <span class="placeholder" data-placeholder="Town/City"></span>
                   </div>
                   <div class="col-md-12 form-group p_star">
-                    <select class="country_select">
-                      <option value="1">District</option>
-                      <option value="2">District</option>
-                      <option value="4">District</option>
+                 <!-- <input type="text" class="form-control" id="district" name="district" />
+                    <span class="placeholder" data-placeholder="District"></span>-->
+                   <select class="country_select" name="district">
+                      <option value="District 1">District A</option>
+                      <option value="District 2">District B</option>
+                      <option value="District 3">District C</option>
                     </select>
                   </div>
                   <div class="col-md-12 form-group">
                     <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
                   </div>
+                  {{ csrf_field() }}
+                  <input type="hidden" name="method" value="POST">
+                  <input type="submit" name="submit" value="lanjut">
                 </form>
                 <div class="checkout_btn_inner float-right">
                     <a class="btn_1" href="/">Lanjutkan Pembayaran</a>

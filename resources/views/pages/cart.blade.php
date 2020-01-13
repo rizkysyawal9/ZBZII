@@ -45,7 +45,9 @@
                 <td>
                   <div class="media">
                     <div class="d-flex">
-                       <a href="/{{ $item->model->type }}/{{ $item->model->slug }}"><img src="{{asset('/frontend')}}/img/arrivel/arrivel_1.png" alt="" /></a>
+                       <a href="/{{ $item->model->type }}/{{ $item->model->slug }}">
+                       <img src="{{ asset('storage/product/'. $item->model->featured_img) }}" alt="" width="150">
+                     <!--  <img src="{{asset('/frontend')}}/img/arrivel/arrivel_1.png" alt="" />--></a>
                     </div>
                     <div class="media-body">
                       <p>{{ $item->model->name }}</p>

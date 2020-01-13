@@ -36,7 +36,8 @@
               <div class="lSSlideWrapper usingCss" style="transition-duration: 600ms; transition-timing-function: ease">
                 <div id="vertical" class="lightSliderIsGrab lSSlide" style="width: 2040px; height: 580px; padding-bottom: 0%; transform: tranlate3d(-1530px, 0px, 0px);">
                   <div data-thumb="img/product_details/prodect_details_1.png">
-                    <img src="img/blazer-product.jpg" />
+                  <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="" width="400">
+                  <!--  <img src="img/blazer-product.jpg" />-->
                   </div>
                   <!-- <div data-thumb="img/product_details/prodect_details_2.png">
                     <img src="img/detail_1.jpg"/>

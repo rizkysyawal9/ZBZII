@@ -9,7 +9,7 @@ class DailyController extends Controller
 {
     public function category(){
         $name = "Daily Wear Category";
-        $products = Product::inRandomOrder()->where('type','Daily')->take(14)->get();
+        $products = Product::orderBy('updated_at','desc')->where('type','Daily')->take(14)->get();
         return view('pages.Product-type')->with(
             [
                 'products' => $products,

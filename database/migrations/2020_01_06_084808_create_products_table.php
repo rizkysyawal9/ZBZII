@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('type');
             $table->integer('price');
             $table->text('description');
-            $table->boolean('featured')->default(false);
+            $table->string('featured_img')->nullable();
             $table->timestamps();
         });
     }

@@ -10,7 +10,7 @@ class CasualController extends Controller
 {
     public function category(){
         $name = "Casual Wear Category";
-        $products = Product::inRandomOrder()->where('type','Casual')->take(14)->get();
+        $products = Product::orderBy('updated_at','desc')->where('type','Casual')->get();
         return view('pages.Product-type')->with(
             [
                 'products' => $products,
