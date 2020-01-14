@@ -12,7 +12,7 @@
     
         <h3>Nama</h3>
         <input type="text" name="name" value="{{ old('name')}}" >
-        <h3>Detail</h3>
+        <h3>Availability</h3>
         <input type="text" name="details" value="{{ old('details')}}" ><br>
         <h3>Deskripsi</h3>
         <textarea name="description" rows="8" cols="40">{{ old('description') }}</textarea><br>

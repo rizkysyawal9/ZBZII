@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>Daftar Semua Produk</h1>
+<h2><a href="{{ route('admin.create') }}"> Tambah Produk Baru </a></h2>
     @foreach($products as $product)
     <li>{{ $product->name }} - @currency($product->price)<br>
     <img src="{{ asset('storage/product/'. $product->featured_img) }}" alt="" width="150">

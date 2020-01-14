@@ -16,7 +16,7 @@ class ProductsTableSeeder extends Seeder
             Product::create([
                 'name' => 'Daily '.$i,
                 'slug' => 'Daily-'.$i,
-                'details' => 'Moslem Dress',
+                'details' => 'In Stock',
                 'type'=>'Daily',
                 'price' => rand(149999, 249999),
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
@@ -27,7 +27,7 @@ class ProductsTableSeeder extends Seeder
             Product::create([
                 'name' => 'Casual '.$i,
                 'slug' => 'Casual-'.$i,
-                'details' => 'Moslem Dress',
+                'details' => 'In Stock',
                 'type'=>'Casual',
                 'price' => rand(149999, 249999),
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',
@@ -38,7 +38,7 @@ class ProductsTableSeeder extends Seeder
             Product::create([
                 'name' => 'Party '.$i,
                 'slug' => 'Party-'.$i,
-                'details' => 'Moslem Dress',
+                'details' => 'In Stock',
                 'type'=>'Party',
                 'price' => rand(149999, 249999),
                 'description' =>'Lorem '. $i . ' ipsum dolor sit amet, consectetur adipisicing elit. Ipsum temporibus iusto ipsa, asperiores voluptas unde aspernatur praesentium in? Aliquam, dolore!',

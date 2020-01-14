@@ -11,7 +11,7 @@
     <form action="{{ route('admin.update', [ 'id' => $product->id ]) }}" method="post" enctype="multipart/form-data">
         <h3>Nama</h3>
         <input type="text" name="name" value="{{ $product->name }}">
-        <h3>Detail</h3>
+        <h3>Availability</h3>
         <input type="text" name="details" value="{{ $product->details }}"><br>
         <h3>Deskripsi</h3>
         <textarea name="description" rows="8" cols="40">{{ $product->description }}</textarea><br>

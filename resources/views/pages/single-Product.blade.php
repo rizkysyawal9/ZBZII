@@ -63,7 +63,7 @@
                      
                 </li>
                 <li>
-                  <a> <span>Availibility</span> : In Stock</a>
+                  <a> <span>Availibility</span> : {{ $products->details }}</a>
                 </li>
               </ul>
               <p>
