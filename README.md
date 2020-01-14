@@ -5,7 +5,7 @@ setelah clone web tersebut.
 2. Buat database kosong di phpmyadmin/mySQL, nama tabelnya boleh apapun 
 3. Bikin file .env dan copy contentsnya sbb: 
 
-//Ini Konten .env 
+**//Ini Konten .env** 
 
 APP_NAME=ZeenByZee
 APP_ENV=local
@@ -52,11 +52,11 @@ PUSHER_APP_CLUSTER=mt1
 MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
 MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
-//Ini akhir dari konten .env
+**//Ini akhir dari konten .env**
 
 4. Bikin file .gitignore kontennya adalah sbb: 
 
-//Ini awal konten Git Ignore 
+**//Ini awal konten Git Ignore**
 
 /node_modules
 /public/hot
@@ -71,7 +71,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 
-//Ini Akhir dari konten
+**//Ini Akhir dari konten**
 
 5. Di file env. ganti nama databasenya sesuai dengan database yang kamu buat (di nomor 1)
 6. di terminal, Run composer require laravel/ui
