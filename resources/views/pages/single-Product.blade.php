@@ -37,16 +37,7 @@
                 <div id="vertical" class="lightSliderIsGrab lSSlide" style="width: 2040px; height: 580px; padding-bottom: 0%; transform: tranlate3d(-1530px, 0px, 0px);">
                   <div data-thumb="img/product_details/prodect_details_1.png">
                   <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="" width="400">
-                  <!--  <img src="img/blazer-product.jpg" />-->
                   </div>
-                  <!-- <div data-thumb="img/product_details/prodect_details_2.png">
-                    <img src="img/detail_1.jpg"/>
-                  </div>
-                  <div data-thumb="img/product_details/prodect_details_3.png">
-                    <img src="img/detail_2.jpg" />
-                  </div>
-                  <div data-thumb="img/product_details/prodect_details_4.png">
-                    <img src="img/detail_3.jpg" /> -->
                   </div>
                 </div>
               </div>
@@ -69,12 +60,6 @@
               <p>
                  {{ $products->description }}
               </p>
-              <div class="card_area">
-                <div class="product_count d-inline-block">
-                  <span class="inumber-decrement"> <i class="ti-minus"></i></span>
-                  <input class="input-number" type="text" value="1" min="0" max="10">
-                  <span class="number-increment"> <i class="ti-plus"></i></span>
-                </div>
 
                 
                 <div class="add_to_cart">
