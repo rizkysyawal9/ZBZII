@@ -14,7 +14,6 @@
                                 <div class="banner_text_iner">
                                     <h5>Modest Fasion</h5>
                                     <h1>Moslem Women Wear</h1>
-                                    <a href="#" class="btn_1">shop now</a>
                                 </div>
                             </div>
                         </div>
