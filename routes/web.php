@@ -37,16 +37,11 @@ Route::get('/empty', function(){
     return redirect('/cart');
 });
 
+
+
 //Route For Admin 
 Route::get('/zeener','Zeeners@index');
-/*Route::get('/zeener/create', 'Zeeners@create')->name('admin.create');
-Route::get('/zeener/{id}/edit', 'Zeeners@edit')->name('admin.edit');
-Route::post('/zeener','Zeeners@store')->name('admin.store');
-Route::put('/zeener/{id}', 'Zeeners@update')->name('admin.update');
-Route::delete('/zeener/{id}','Zeeners@destroy')->name('admin.delete');*/
 
-//Route::get('/single-product', 'PageController@single_product');
-/*Route::get('/cart', 'PageController@cart')->name('cart');*/
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 Route::get('/confirmation', 'PageController@confirmation')->name('confirmation');
 
@@ -59,7 +54,27 @@ Route::group(['middleware'=>'admin'], function(){
     Route::delete('/admin/{id}','Zeeners@destroy')->name('admin.delete');
 });
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+/*Route::get('/zeener/create', 'Zeeners@create')->name('admin.create');
+Route::get('/zeener/{id}/edit', 'Zeeners@edit')->name('admin.edit');
+Route::post('/zeener','Zeeners@store')->name('admin.store');
+Route::put('/zeener/{id}', 'Zeeners@update')->name('admin.update');
+Route::delete('/zeener/{id}','Zeeners@destroy')->name('admin.delete');*/
+
+//Route::get('/single-product', 'PageController@single_product');
+/*Route::get('/cart', 'PageController@cart')->name('cart');*/
 // admin functionality
 /*Route::GET('admin/dashboard', 'AdminController@dashboard');
 Route::GET('admin/logout', 'Admin\LoginController@logout');
@@ -69,14 +84,4 @@ Route::POST('admin', 'Admin\LoginController@login');*/
 
 //Route::get('/ProductType', 'PageController@ProductType')->name('ProductType');
 //Route::get('/{type}', 'PageController@category');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -8,14 +8,23 @@
 </head>
 <body>
 <h1>Buat Produk</h1>
-    <form action="/zeener" method="post" enctype="multipart/form-data">
+    <form action="/admin" method="post" enctype="multipart/form-data">
     
         <h3>Nama</h3>
-        <input type="text" name="name" value="{{ old('name')}}" >
+        <input type="text" name="name" value="{{ old('name')}}"/>
+        @if($errors->has('name'))
+          <p>{{ $errors->first('name') }}</p>
+        @endif
         <h3>Availability</h3>
-        <input type="text" name="details" value="{{ old('details')}}" ><br>
+        <input type="text" name="details" value="{{ old('details')}}"/>
+        @if($errors->has('details'))
+          <p>{{ $errors->first('details') }}</p>
+        @endif<br>
         <h3>Deskripsi</h3>
-        <textarea name="description" rows="8" cols="40">{{ old('description') }}</textarea><br>
+        <textarea name="description" rows="8" cols="40">{{ old('description') }}</textarea>
+        @if($errors->has('description'))
+          <p>{{ $errors->first('description') }}</p>
+        @endif<br>
         <h3>Kategori</h3>
         <select name="type">
         @foreach($types as $type)
@@ -24,6 +33,9 @@
         </select>
         <h3>Harga</h3>
         <input type="number" name="price" value="{{ old('price') }}">
+        @if($errors->has('price'))
+          <p>{{ $errors->first('price') }}</p>
+        @endif
         <h3>Gambar</h3><br>
         <input type="file" name="featured_img" >     
         {{ csrf_field() }}   

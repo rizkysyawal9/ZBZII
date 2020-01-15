@@ -49,7 +49,11 @@ class CheckoutController extends Controller
         $form->city = $request->city;
         $form->zip = $request->zip;
         $form->save();
-        Mail::to('test@gmail.com')->send(new FormPosted($form));
-        return redirect()->route('home');
+        $sub = str_replace(',', '', Cart::subtotal()) + 10000;
+        //Mail::to('test@gmail.com')->send(new FormPosted($form));
+        return view('pages/confirmation')->with([
+            'form'=> $form,
+            'sub' => $sub,
+            ]);
     }
 }

@@ -54,8 +54,13 @@ class PageController extends Controller
     public function checkout(){
         return view('pages.checkout');
     }
-    public function confirmation(){
-        return view('pages.confirmation');
+    public function confirmation($id){
+        $form = Form::find($id);
+        $sub = str_replace(',', '', Cart::subtotal()) + 10000;
+        return view('pages.confirmation')->with([
+                'form'=> $form,
+                'sub' => $sub
+            ]);
     }
     /**
      * Show the form for creating a new resource.

@@ -25,7 +25,10 @@ class Zeeners extends Controller
             'details'=>'required|max:100',
             'price'=>'required',
             'description'=>'required',
-            'featured_img'=>'mimes:jpg,jpeg,png|max:2048'
+            'featured_img'=>'mimes:jpg,jpeg,png|max:2048',
+            'featured_img2'=>'mimes:jpg,jpeg,png|max:2048',
+            'featured_img3'=>'mimes:jpg,jpeg,png|max:2048',
+            'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
 
         $fileName = time().'png';

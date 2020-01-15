@@ -23,6 +23,9 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->text('description');
             $table->string('featured_img')->nullable();
+            $table->string('featured_img1')->nullable();
+            $table->string('featured_img2')->nullable();
+            $table->string('featured_img3')->nullable();
             $table->timestamps();
         });
     }

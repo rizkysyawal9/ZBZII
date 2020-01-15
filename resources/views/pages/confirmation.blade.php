@@ -30,7 +30,7 @@
                   <h4>order info</h4>
                   <ul>
                       <li>
-                          <p>Total</p><span>: USD 2210</span>
+                          <p>Total</p><span>: @currency($sub)</span>
                         </li>
                         <li>
                             <p>Metode Pembayaran</p><span>: Transfer</span>
@@ -46,16 +46,16 @@
                     <h4>shipping Address</h4>
                     <ul>
                         <li>
-                            <p>Street</p><span>: 56/8</span>
+                            <p>Street</p><span>: {{ $form->add1 }} {{$form->add2}} </span>
                         </li>
                         <li>
-                            <p>city</p><span>: Los Angeles</span>
+                            <p>city</p><span>: {{ $form->city }}</span>
                         </li>
                         <li>
                             <p>country</p><span>: United States</span>
                         </li>
                         <li>
-                            <p>postcode</p><span>: 36952</span>
+                            <p>postcode</p><span>: {{ $form->zip }}</span>
                         </li>
                     </ul>
                 </div>
