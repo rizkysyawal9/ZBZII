@@ -46,8 +46,9 @@ Route::put('/zeener/{id}', 'Zeeners@update')->name('admin.update');
 Route::delete('/zeener/{id}','Zeeners@destroy')->name('admin.delete');*/
 
 //Route::get('/single-product', 'PageController@single_product');
-/*Route::get('/cart', 'PageController@cart')->name('cart');
-*/Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+/*Route::get('/cart', 'PageController@cart')->name('cart');*/
+Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
+Route::get('/confirmation', 'PageController@confirmation')->name('confirmation');
 
 Route::group(['middleware'=>'admin'], function(){
     Route::get('/admin', 'Zeeners@index')->name('admin.home');

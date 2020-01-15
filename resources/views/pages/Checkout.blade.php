@@ -58,6 +58,7 @@
                   </div>
                   {{ csrf_field() }}
                   <div class="row">
+
                     <div class="col-lg-12">
                       <div class="order_box">
                         <h2>Your Order</h2>
@@ -69,7 +70,7 @@
                           </li>
                           @foreach(Cart::content() as $item)
                           <li>
-                            <a href="#">  {{ $item->name }}
+                            <a href="#"> {{ $item->name }} 
                               <span class="middle">x {{ $item->qty }}</span>
                               <span class="last">@currency($item->price)</span>
                             </a>

@@ -54,6 +54,9 @@ class PageController extends Controller
     public function checkout(){
         return view('pages.checkout');
     }
+    public function confirmation(){
+        return view('pages.confirmation');
+    }
     /**
      * Show the form for creating a new resource.
      *
