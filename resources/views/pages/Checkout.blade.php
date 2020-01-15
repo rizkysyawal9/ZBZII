@@ -30,32 +30,54 @@
                 <h3>Billing Details</h3>
                 <form class="row contact_form" action="{{ route('checkout.store') }}" method="post" novalidate="novalidate">
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="first" name="first" />
+                    <input type="text" class="form-control" id="first" name="first" value="{{ old('first') }}" />
                     <span class="placeholder" data-placeholder="First name"></span>
+                    @if($errors->has('first'))
+                    <p>{{ $errors->first('first') }}</p>
+                    @endif
                   </div>
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="last" name="last" />
+                    <input type="text" class="form-control" id="last" name="last" value="{{ old('last') }}" />
                     <span class="placeholder" data-placeholder="Last name"></span>
+                    @if($errors->has('last'))
+                    <p>{{ $errors->first('last') }}</p>
+                    @endif
                   </div>
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="number" name="number" />
+                    <input type="number" class="form-control" id="number" name="number" value="{{ old('number') }}" />
                     <span class="placeholder" data-placeholder="Phone number"></span>
+                    @if($errors->has('number'))
+                    <p>{{ $errors->first('number') }}</p>
+                    @endif
                   </div>
                   <div class="col-md-12 form-group p_star">
-                    <input type="text" class="form-control" id="add1" name="add1" />
+                    <input type="text" class="form-control" id="add1" name="add1" value="{{ old('add1') }}"/>
                     <span class="placeholder" data-placeholder="Address line 01"></span>
+                    @if($errors->has('add1'))
+                    <p>{{ $errors->first('add1') }}</p>
+                    @endif
                   </div>
                   <div class="col-md-12 form-group p_star">
-                    <input type="text" class="form-control" id="add2" name="add2" />
+                    <input type="text" class="form-control" id="add2" name="add2" value="{{ old('add2') }}" />
                     <span class="placeholder" data-placeholder="Address line 02"></span>
+                    @if($errors->has('add2'))
+                    <p>{{ $errors->first('add2') }}</p>
+                    @endif
                   </div>
                   <div class="col-md-12 form-group p_star">
-                    <input type="text" class="form-control" id="city" name="city" />
+                    <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" />
                     <span class="placeholder" data-placeholder="Town/City"></span>
+                    @if($errors->has('city'))
+                    <p>{{ $errors->first('city') }}</p>
+                    @endif
                   </div>
                   <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" value="{{ old('zip') }}" />
+                    @if($errors->has('zip'))
+                    <p>{{ $errors->first('zip') }}</p>
+                    @endif
                   </div>
+                  
                   {{ csrf_field() }}
                   <div class="row">
 

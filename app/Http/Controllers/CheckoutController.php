@@ -30,6 +30,16 @@ class CheckoutController extends Controller
     }
 
     public function store(Request $request){
+        $this->validate($request, [
+            'first'=> 'required',
+            'last'=>'required',
+            'number'=>'required',
+            'add1'=>'required',
+            'add2'=>'required',
+            'city'=>'required',
+            'zip'=>'required'
+        ]);
+
         $form = new Form;
         $form->first = $request->first;
         $form->last = $request->last;
@@ -37,7 +47,6 @@ class CheckoutController extends Controller
         $form->add1 = $request->add1;
         $form->add2 = $request->add2;
         $form->city = $request->city;
-        $form->district = $request->district;
         $form->zip = $request->zip;
         $form->save();
         Mail::to('test@gmail.com')->send(new FormPosted($form));

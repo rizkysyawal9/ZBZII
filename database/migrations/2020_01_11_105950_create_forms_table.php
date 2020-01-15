@@ -21,7 +21,7 @@ class CreateFormsTable extends Migration
             $table->string('add1');
             $table->string('add2');
             $table->string('city');
-            $table->string('district');
+            $table->string('district')->nullable();
             $table->integer('zip')->nullable();
             $table->timestamps();
         });
