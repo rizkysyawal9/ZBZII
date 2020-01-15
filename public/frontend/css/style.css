@@ -742,6 +742,24 @@ ul {
   margin: 15px;
 }
 
+.btn_5 {
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #c5c3c3;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: capitalize;
+  color: black;
+  border: none;
+}
+
+.btn_5:hover {
+  background-color: #7a7575;
+  color: black;
+}
+
 /* line 34, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_button.scss */
 .btn_1:hover {
   background-color: #fff;
@@ -5289,6 +5307,8 @@ ul {
 .order_box {
   background: #f4f4f4;
   padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* line 1662, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
@@ -5399,12 +5419,6 @@ ul {
   padding: 20px;
 }
 
-/* line 1776, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.order_box .payment_item.active h4:before {
-  background: #2f7dfc;
-  border-color: #2f7dfc;
-}
-
 /* line 1784, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
 .order_box .creat_account {
   margin: 15px 0;
@@ -5417,32 +5431,6 @@ ul {
   color: #2a2a2a;
 }
 
-/* line 1793, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.order_box .creat_account a {
-  color: #2f7dfc;
-}
-
-/* line 1798, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.order_box .btn_3 {
-  display: block;
-  line-height: 38px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  /* line 1798, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-  .order_box .btn_3 {
-    padding: 9px 34px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 1798, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-  .order_box .btn_3 {
-    padding: 9px 34px;
-  }
-}
 
 /* End Cart Area css
 ============================================================================================ */
@@ -5516,10 +5504,6 @@ ul {
   margin-bottom: 0px;
 }
 
-/* line 1855, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.tracking_box_area .tracking_box_inner .tracking_form .form-group .btn_3 {
-  box-shadow: -1.717px 8.835px 29.76px 2.24px rgba(255, 51, 104, 0.18);
-}
 
 /* End Tracking Form Area css
 ============================================================================================ */
@@ -5661,19 +5645,6 @@ ul {
   line-height: 25px;
 }
 
-/* line 1976, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.login_part .login_part_text .btn_3 {
-  border: 1px solid #ffc2d2;
-  background-color: transparent;
-  font-size: 14px;
-  margin-top: 28px;
-}
-
-/* line 1981, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.login_part .login_part_text .btn_3:hover {
-  background-color: #fff;
-  color: #2f7dfc;
-}
 
 @media (max-width: 991px) {
   /* line 1987, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
@@ -5729,12 +5700,6 @@ ul {
   margin-left: 10px;
 }
 
-/* line 2023, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.login_part .form-group .btn_3 {
-  display: block;
-  width: 100%;
-  margin: 30px 0 17px;
-}
 
 /* line 2029, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
 .login_part .lost_pass {
@@ -5812,32 +5777,6 @@ ul {
   display: inline-block;
   margin-left: 20px;
   box-shadow: -14.142px 14.142px 20px 0px rgba(0, 0, 0, 0.1);
-}
-
-/* line 2101, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_text .like_us:hover {
-  background-color: #2f7dfc;
-  color: #fff;
-}
-
-/* line 2106, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_text .btn_3 {
-  padding: 13px 36px;
-}
-
-/* line 2108, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_text .btn_3:hover {
-  color: black;
-  background-color: #fff;
-  box-shadow: -14.142px 14.142px 20px 0px rgba(0, 0, 0, 0.1);
-  border: 1px solid #fff;
-}
-
-@media (max-width: 576px) {
-  /* line 2106, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-  .s_product_text .btn_3 {
-    padding: 13px 20px;
-  }
 }
 
 /* line 2129, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
@@ -7816,11 +7755,6 @@ h6 {
   .blog_part .single-home-blog .card .card-body {
     padding: 20px;
   }
-}
-
-/* line 66, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .card-body .btn_4 {
-  margin-bottom: 20px;
 }
 
 /* line 70, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_blog_part.scss */

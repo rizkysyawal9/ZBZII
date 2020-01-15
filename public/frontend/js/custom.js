@@ -1,16 +1,24 @@
 (function ($) {
   "use strict";
 
-
-
-  $('.popup-youtube, .popup-vimeo').magnificPopup({
-    // disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: false
+  $( document ).ready(function() {
+    $("#search_input_box").hide();
+    $("#search_1").on('click', function(){
+        $("#search_input_box").slideToggle('500');
+        $("#search_input").focus();
+    });
   });
+  $(document).ready(function(){
+      $("#close_search").on('click', function(){
+          $("#search_input_box").slideUp('500');
+      });
+  });
+  $(document).ready(function(){
+      $()
+      $("#menu-icon").on('click', function(){
+          $("#navbarSupportedContent").slideToggle('200');
+      });
+  }); 
 
   var review = $('.textimonial_iner');
   if (review.length) {

@@ -33,16 +33,6 @@
                                 <div class="single_product_menu product_bar_item">
                                     <h2>{{ $category }}</h2>
                                 </div>
-                                <div class="product_top_bar_iner product_bar_item d-flex">
-                                    <div class="product_bar_single">
-                                        <select class="wide">
-                                            <option data-display="Default sorting">Default sorting</option>
-                                            <option value="1">Some option</option>
-                                            <option value="2">Another option</option>
-                                            <option value="3">Potato</option>
-                                        </select>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     @foreach($products as $product)

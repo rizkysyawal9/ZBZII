@@ -53,74 +53,52 @@
                     <input type="text" class="form-control" id="city" name="city" />
                     <span class="placeholder" data-placeholder="Town/City"></span>
                   </div>
-                  <div class="col-md-12 form-group p_star">
-                 <!-- <input type="text" class="form-control" id="district" name="district" />
-                    <span class="placeholder" data-placeholder="District"></span>-->
-                   <select class="country_select" name="district">
-                      <option value="District 1">District A</option>
-                      <option value="District 2">District B</option>
-                      <option value="District 3">District C</option>
-                    </select>
-                  </div>
                   <div class="col-md-12 form-group">
                     <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
                   </div>
                   {{ csrf_field() }}
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="order_box">
+                        <h2>Your Order</h2>
+                        <ul class="list">
+                          <li>
+                            <a href="#">Product
+                              <span>Total</span>
+                            </a>
+                          </li>
+                          @foreach(Cart::content() as $item)
+                          <li>
+                            <a href="#">  {{ $item->name }}
+                              <span class="middle">x {{ $item->qty }}</span>
+                              <span class="last">@currency($item->price)</span>
+                            </a>
+                          </li>
+                          @endforeach
+                        <ul class="list list_2">
+                          <li>
+                            <a href="#">Subtotal
+                              <span>Rp. {{ Cart::subtotal() }}</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Shipping
+                              <span>Flat rate: @currency($rate)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Total
+                              <span>@currency($sub)</span>
+                            </a>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
                   <input type="hidden" name="method" value="POST">
-                  <input type="submit" name="submit" value="lanjut">
+                  <div class="checkout_btn_inner">
+                    <input class= "btn_1" type="submit" name="submit" value="Lanjutkan Pembayaran">
+                  </div>
                 </form>
-                <div class="checkout_btn_inner float-right">
-                    <a class="btn_1" href="/">Lanjutkan Pembayaran</a>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="order_box">
-                  <h2>Your Order</h2>
-                  <ul class="list">
-                    <li>
-                      <a href="#">Product
-                        <span>Total</span>
-                      </a>
-                    </li>
-                    @foreach(Cart::content() as $item)
-                    <li>
-                      <a href="#">{{ $item->name }}
-                        <span class="middle">x {{ $item->qty }}</span>
-                        <span class="last">@currency($item->price)</span>
-                      </a>
-                    </li>
-                    @endforeach
-                    <!--
-                    <li>
-                      <a href="#">Fresh Tomatoes
-                        <span class="middle">x 02</span>
-                        <span class="last">$720.00</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">Fresh Brocoli
-                        <span class="middle">x 02</span>
-                        <span class="last">$720.00</span>
-                      </a>
-                    </li>
-                  </ul>-->
-                  <ul class="list list_2">
-                    <li>
-                      <a href="#">Subtotal
-                        <span>Rp. {{ Cart::subtotal() }}</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">Shipping
-                        <span>Flat rate: @currency($rate)</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">Total
-                        <span>@currency($sub)</span>
-                      </a>
-                    </li>
-                  </ul>
               </div>
             </div>
         </div>

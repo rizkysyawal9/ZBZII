@@ -58,7 +58,7 @@
                   <h5>@currency($item->model->price)</h5>
                 </td>
                 <td>
-                    <select class="quantity" data-id="{{ $item->rowId }}" data-productQuantity="{{ $item->model->quantity }}">
+                    <select class="quantity nice-select" data-id="{{ $item->rowId }}" data-productQuantity="{{ $item->model->quantity }}">
                                 @for ($i = 1; $i < 5 + 1 ; $i++)
                                     <option {{ $item->qty == $i ? 'selected' : '' }}>{{ $i }}</option>
                                 @endfor
@@ -72,7 +72,7 @@
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 
-                                <button type="submit" class="cart-options">Remove</button>
+                                <button type="submit" class="cart-options btn_5">Remove</button>
                       </form>
                 </td>
               </tr>
