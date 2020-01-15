@@ -207,6 +207,10 @@ h2,
   color: white;
 }
 
+.section-description{
+  margin-bottom: 30px;
+}
+
 /**************** common css start ****************/
 /* line 4, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_common.scss */
 body {

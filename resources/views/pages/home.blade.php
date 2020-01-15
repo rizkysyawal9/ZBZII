@@ -14,6 +14,10 @@
                                 <div class="banner_text_iner">
                                     <h5>Modest Fasion</h5>
                                     <h1>Moslem Women Wear</h1>
+<<<<<<< HEAD
+=======
+                                    <!-- <a href="#" class="btn_1">shop now</a> -->
+>>>>>>> yasmin
                                 </div>
                             </div>
                         </div>
@@ -32,16 +36,13 @@
         
             <div class="container">
                 <h1 class="text-center">New Arrival</h1>
-            
                 <p class="section-description text-center">Produk terbaru minggu ini.</p>
-            
-                <div class="text-center button-container">
+                <!-- <div class="text-center button-container">
                     <a href="#" class="btn_1">Featured</a>
                     <a href="#" class="btn_1">On Sale</a>
-                </div>
-            
+                </div> -->
                 <div class="products text-center">
-                @foreach ($products as $product)
+                    @foreach ($products as $product)
                         <div class="single_category_product">
                             <div class="single_category_img">
                                 <img src="img/blazer-product.jpg" href="{{$product->type}}/{{$product->slug}}" alt="">
@@ -54,9 +55,9 @@
                         </div>
                     @endforeach
                 </div> <!-- end products -->
-                <div class="text-center button-container">
+                <!-- <div class="text-center button-container">
                     <a href="#" class="btn_1">View More Products</a>
-                </div>
+                </div> -->
             </div>
         </div>
 </section>
