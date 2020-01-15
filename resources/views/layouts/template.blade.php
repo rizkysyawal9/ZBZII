@@ -67,7 +67,7 @@
                                     <i class="ti-shopping-cart"></i>
                                 </a>
                             </div>
-                            <a class="ti-search" id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <!-- <a class="ti-search" id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a> -->
                         </div>
                     </nav>
                 </div>

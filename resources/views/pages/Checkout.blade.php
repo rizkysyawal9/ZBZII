@@ -77,46 +77,48 @@
                     <p>{{ $errors->first('zip') }}</p>
                     @endif
                   </div>
+
+                  <div class="col-lg-12">
+                    <div class="order_box">
+                      <h2>Your Order</h2>
+                      <table class="table table-borderless">
+                        <thead>
+                          <tr class="tr-list">
+                            <th scope="col" colspan="5">Product</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @foreach(Cart::content() as $item)
+                          <tr class="tr-list">
+                            <th colspan="5"><span>{{ $item->name }} </span></th>
+                            <th>x {{ $item ->qty}} </th>
+                            <th> <span>@currency($item->price)</span></th>
+                          </tr>
+                          @endforeach
+                        </tbody>
+                        <tfoot>
+                          <tr class="tr-list">
+                            <th scope="col" colspan="5">Subtotal</th>
+                            <th scope="col" ></th>
+                            <th scope="col">Rp. {{ Cart::subtotal() }} </th>
+                          </tr>
+                          <tr class="tr-list">
+                            <th scope="col"colspan="5">Shipping</th>
+                            <th scope="col" ></th>
+                            <th scope="col">Flat rate: @currency($rate)</th>
+                          </tr>
+                          <tr class="tr-list">
+                            <th scope="col" colspan="5">Total</th>
+                            <th scope="col" ></th>
+                            <th scope="col">@currency($sub)</th>
+                          </tr>
+                        </tfoot>
+                      </table>
+                  </div>
                   
                   {{ csrf_field() }}
-                  <div class="row">
-
-                    <div class="col-lg-12">
-                      <div class="order_box">
-                        <h2>Your Order</h2>
-                        <ul class="list">
-                          <li>
-                            <a href="#">Product
-                              <span>Total</span>
-                            </a>
-                          </li>
-                          @foreach(Cart::content() as $item)
-                          <li>
-                            <a href="#"> {{ $item->name }} 
-                              <span class="middle">x {{ $item->qty }}</span>
-                              <span class="last">@currency($item->price)</span>
-                            </a>
-                          </li>
-                          @endforeach
-                        <ul class="list list_2">
-                          <li>
-                            <a href="#">Subtotal
-                              <span>Rp. {{ Cart::subtotal() }}</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">Shipping
-                              <span>Flat rate: @currency($rate)</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">Total
-                              <span>@currency($sub)</span>
-                            </a>
-                          </li>
-                        </ul>
-                    </div>
-                  </div>
                   <input type="hidden" name="method" value="POST">
                   <div class="checkout_btn_inner">
                     <input class= "btn_1" type="submit" name="submit" value="Lanjutkan Pembayaran">

@@ -211,6 +211,22 @@ h2,
   margin-bottom: 30px;
 }
 
+.billing_details .order_box table tbody tr th {
+  font-weight: normal !important;
+}
+
+.billing_details .order_box table tfoot tr th:last-child {
+  font-weight: normal !important;
+}
+
+.billing_details .order_box thead {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+
+.billing_details .order_box tfoot tr {
+  border-top: 1px solid #dddddd;
+}
 /**************** common css start ****************/
 /* line 4, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_common.scss */
 body {
@@ -5302,11 +5318,6 @@ ul {
   margin-right: 5px;
 }
 
-/* line 1650, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.billing_details .contact_form .form-group .creat_account a {
-  color: #2f7dfc;
-}
-
 /* line 1658, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
 .order_box {
   background: #f4f4f4;
@@ -5317,7 +5328,6 @@ ul {
 
 /* line 1662, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
 .order_box h2 {
-  border-bottom: 1px solid #dddddd;
   font-size: 18px;
   font-weight: 500;
   color: #2a2a2a;
