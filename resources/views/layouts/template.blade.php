@@ -93,34 +93,6 @@
 
     @yield('extra-js')
 
-<!-- more about us start here -->
-<div class="blog-section">
-    <div class="container">
-        <h1 class="text-center">More About Us</h1>
-        <p class="section-description text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Et sed accusantium maxime dolore cum provident itaque ea, a architecto alias quod reiciendis ex ullam id,
-        soluta deleniti eaque neque perferendis.</p>
-
-        <div class="blog-posts">
-            <div class="blog-post" id="blog1">
-                <a href="#"><img src="img/more-about-us.jpg" alt="blog image"></a>
-                <a href="#"><h2 class="blog-title">Self Manufactured</h2></a>
-                <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ullam, ipsa quasi?</div>
-            </div>
-            <div class="blog-post" id="blog2">
-                <a href="#"><img src="img/more-about-us.jpg" alt="blog image"></a>
-                <a href="#"><h2 class="blog-title">Premium Quality</h2></a>
-                <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ullam, ipsa quasi?</div>
-            </div>
-            <div class="blog-post" id="blog3">
-                <a href="#"><img src="img/more-about-us.jpg" alt="blog image"></a>
-                <a href="#"><h2 class="blog-title">Elegant Style</h2></a>
-                <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ullam, ipsa quasi?</div>
-            </div>
-        </div> <!-- end blog-posts -->
-    </div> <!-- end container -->
-</div> <!-- end blog-section -->
-
 
     <!--::footer_part start::-->
     <footer class="footer_part">
@@ -130,8 +102,8 @@
                     <div class="single_footer_part">
                         <h4>Category</h4>
                         <ul class="list-unstyled">
-                            <li><a href="/DailyWear">Daily Wear</a></li>
-                            <li><a href="/PartyDress">Party Dress</a></li>
+                            <li><a href="/Daily">Daily Wear</a></li>
+                            <li><a href="/Party">Party Dress</a></li>
                             <li><a href="/Casual">Casual</a></li>
                         </ul>
                     </div>
@@ -140,9 +112,8 @@
                     <div class="single_footer_part">
                         <h4>Company</h4>
                         <ul class="list-unstyled">
-                            <li><a href="">About</a></li>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/about">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -150,9 +121,9 @@
                     <div class="single_footer_part">
                         <h4>Address</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#">200, Green block, NewYork</a></li>
-                            <li><a href="#">+10 456 267 1678</a></li>
-                            <li><span>contact89@winter.com</span></li>
+                            <li><a href="#">Jalan Basuki Rahmat No 54 Sindangkasih Purwakarta - Jawa Barat</a></li>
+                            <li><a href="#">+62878 4333 7726</a></li>
+                            <li><a href="#">+62817 1727 5482</a></li>
                         </ul>
                     </div>
                 </div>

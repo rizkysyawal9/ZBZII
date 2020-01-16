@@ -44,6 +44,7 @@ Route::get('/zeener','Zeeners@index');
 
 Route::get('/checkout', 'CheckoutController@index')->name('checkout.index');
 Route::get('/confirmation', 'PageController@confirmation')->name('confirmation');
+Route::get('/about', 'PageController@about')->name('about');
 
 Route::group(['middleware'=>'admin'], function(){
     Route::get('/admin', 'Zeeners@index')->name('admin.home');

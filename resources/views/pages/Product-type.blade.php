@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Category')
+@section('title', '{{ $category }}')
 
 @section('breadcrumb')  
     <!-- breadcrumb start-->
@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
-                            <p>Home / Product Category</p>
+                            <p>Home /{{ $category }}</p>
                         </div>
                     </div>
                 </div>

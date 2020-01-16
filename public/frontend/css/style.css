@@ -211,6 +211,16 @@ h2,
   margin-bottom: 30px;
 }
 
+.blog-section .container ul li{
+  font-family: "Roboto", sans-serif;
+  line-height: 2;
+  font-size: 15px;
+  margin-bottom: 0px;
+  color: #606060;
+  font-weight: 400;
+  list-style: circle;
+}
+
 .billing_details .order_box table tbody tr th {
   font-weight: normal !important;
 }

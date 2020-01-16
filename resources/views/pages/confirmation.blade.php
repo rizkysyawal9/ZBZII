@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item">
-                            <p>Home / Confirmation</p>
+                            <p>Home / Keranjang Belanja / Checkout / Confirmation</p>
                         </div>
                     </div>
                 </div>

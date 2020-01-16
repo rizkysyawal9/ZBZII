@@ -51,9 +51,9 @@
                         </div>
                     @endforeach
                 </div> <!-- end products -->
-                <!-- <div class="text-center button-container">
-                    <a href="#" class="btn_1">View More Products</a>
-                </div> -->
+                <div class="text-center button-container">
+                    <a href="/Daily" class="btn_1">View More Products</a>
+                </div>
             </div>
         </div>
 </section>
