@@ -8,13 +8,15 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
+                    
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success" role="alert"   >
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    Selamat Datang, {{ Auth::user()->name }}<br><br>
+                    <a class="btn btn-primary" href="{{ route('admin.home') }}">Semua Produk</a>
+                    <a class="btn btn-secondary" href="{{ route('admin.create') }}">Tambah Produk</a>
                 </div>
             </div>
         </div>

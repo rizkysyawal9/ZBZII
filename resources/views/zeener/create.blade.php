@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Buat Produk</h1>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-11">
+<div class="card">
+  <div class="card-header">
+  <b>Tambah Produk</b>
+  </div>
+  <div class="card-body">
     <form action="/admin" method="post" enctype="multipart/form-data">
     
         <h3>Nama</h3>
@@ -52,5 +53,9 @@
         <input type="submit" name="submit" value="create">
         <input type="hidden" name="method" value="POST">
     </form>
-</body>
-</html>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+@endsection
