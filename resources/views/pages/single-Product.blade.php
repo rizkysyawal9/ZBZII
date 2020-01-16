@@ -39,16 +39,14 @@
                   <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="" width="400">
                   </div>
                   </div>
-                  @if($products->featured_img2 != null){
+                  @if($products->featured_img2)
                   <img src="{{ asset('storage/product/'. $products->featured_img2) }}" alt="" width="100">
                   @endif
-                  @if($products->featured_img3){
+                  @if($products->featured_img3)
                   <img src="{{ asset('storage/product/'. $products->featured_img3) }}" alt="" width="100">
-                  }
                   @endif
-                  @if($products->featured_img4){
+                  @if($products->featured_img4)
                   <img src="{{ asset('storage/product/'. $products->featured_img4) }}" alt="" width="100">
-                  }
                   @endif
                 </div>
               </div>

@@ -31,10 +31,10 @@ class Zeeners extends Controller
             'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        $fileName = time().'png';
-        $fileName2 = time().'png';
-        $fileName3 = time().'png';
-        $fileName4 = time().'png';
+        $fileName = time().'img1';
+        $fileName2 = time().'img2';
+        $fileName3 = time().'img3';
+        $fileName4 = time().'img4';
 
         $request->file('featured_img')->storeAs('public/product', $fileName);
 
@@ -96,23 +96,23 @@ class Zeeners extends Controller
             'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
         if($request->file('featured_img')){
-            $fileName = time().'png';
+            $fileName = time().'img1';
             $request->file('featured_img')->storeAs('public/product', $fileName);
         }
 
         
         if($request->file('featured_img2')){
-            $fileName2 = time().'png';
+            $fileName2 = time().'img2';
             $request->file('featured_img2')->storeAs('public/product', $fileName2);
         }
 
         if($request->file('featured_img3')){
-            $fileName3 = time().'png';
+            $fileName3 = time().'img3';
             $request->file('featured_img3')->storeAs('public/product', $fileName3);
         }
 
         if($request->file('featured_img4')){
-            $fileName4 = time().'png';
+            $fileName4 = time().'img4';
             $request->file('featured_img4')->storeAs('public/product', $fileName4);
         }
         
@@ -123,6 +123,7 @@ class Zeeners extends Controller
         $product->description = $request->description;
         $product->type = $request->type;
         $product->price = $request->price;
+
         if($request->featured_img){
             $product->featured_img = $fileName;
         }

@@ -27,7 +27,7 @@
         <h3>Harga</h3>
         <input type="number" name="price" value="{{ $product->price }}">
         <h3>Gambar</h3><br>
-        <input type="file" name="featured_img" value="{{ $product->featured_img }}">     
+        <input type="file" name="featured_img">     
         Gambar Pendukung
         <br>
         <input type="file" name="featured_img2">
