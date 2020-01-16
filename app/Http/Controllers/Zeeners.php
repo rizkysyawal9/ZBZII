@@ -35,19 +35,18 @@ class Zeeners extends Controller
         $fileName2 = time().'png';
         $fileName3 = time().'png';
         $fileName4 = time().'png';
+
         $request->file('featured_img')->storeAs('public/product', $fileName);
-        if($request->featured_img2){
-            $fileName = time().'png';
+
+        if($request->file('featured_img2')){
             $request->file('featured_img2')->storeAs('public/product', $fileName2);
         }
 
-        if($request->featured_img3){
-            $fileName = time().'png';
+        if($request->file('featured_img3')){
             $request->file('featured_img3')->storeAs('public/product', $fileName3);
         }
 
-        if($request->featured_img4){
-            $fileName = time().'png';
+        if($request->file('featured_img4')){
             $request->file('featured_img4')->storeAs('public/product', $fileName4);
         }
         $product = new Product;
@@ -96,26 +95,26 @@ class Zeeners extends Controller
             'featured_img3'=>'mimes:jpg,jpeg,png|max:2048',
             'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
-        if($request->featured_img){
+        if($request->file('featured_img')){
             $fileName = time().'png';
             $request->file('featured_img')->storeAs('public/product', $fileName);
         }
 
-        if($request->featured_img2){
-            $fileName = time().'png';
+        
+        if($request->file('featured_img2')){
+            $fileName2 = time().'png';
             $request->file('featured_img2')->storeAs('public/product', $fileName2);
         }
 
-        if($request->featured_img3){
-            $fileName = time().'png';
+        if($request->file('featured_img3')){
+            $fileName3 = time().'png';
             $request->file('featured_img3')->storeAs('public/product', $fileName3);
         }
 
-        if($request->featured_img4){
-            $fileName = time().'png';
+        if($request->file('featured_img4')){
+            $fileName4 = time().'png';
             $request->file('featured_img4')->storeAs('public/product', $fileName4);
         }
-        
         
         $product = Product::find($id);
         $product->name = $request->name;
