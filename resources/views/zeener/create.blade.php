@@ -37,8 +37,18 @@
           <p>{{ $errors->first('price') }}</p>
         @endif
         <h3>Gambar</h3><br>
-        <input type="file" name="featured_img" >     
+        <input type="file" name="featured_img" >
+        <br>
+        Gambar Pendukung
+        <br>
+        <input type="file" name="featured_img2">
+        <br>
+        <input type="file" name="featured_img3">
+        <br>
+        <input type="file" name="featured_img4">     
+
         {{ csrf_field() }}   
+
         <input type="submit" name="submit" value="create">
         <input type="hidden" name="method" value="POST">
     </form>

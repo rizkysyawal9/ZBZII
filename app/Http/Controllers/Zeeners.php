@@ -32,7 +32,24 @@ class Zeeners extends Controller
         ]);
 
         $fileName = time().'png';
+        $fileName2 = time().'png';
+        $fileName3 = time().'png';
+        $fileName4 = time().'png';
         $request->file('featured_img')->storeAs('public/product', $fileName);
+        if($request->featured_img2){
+            $fileName = time().'png';
+            $request->file('featured_img2')->storeAs('public/product', $fileName2);
+        }
+
+        if($request->featured_img3){
+            $fileName = time().'png';
+            $request->file('featured_img3')->storeAs('public/product', $fileName3);
+        }
+
+        if($request->featured_img4){
+            $fileName = time().'png';
+            $request->file('featured_img4')->storeAs('public/product', $fileName4);
+        }
         $product = new Product;
         $product->name = $request->name;
         $product->slug = $request->name . $product->id;
@@ -41,6 +58,16 @@ class Zeeners extends Controller
         $product->type = $request->type;
         $product->price = $request->price;
         $product->featured_img = $fileName;
+
+        if($request->featured_img2){
+            $product->featured_img2 = $fileName2;
+        }
+        if($request->featured_img3){
+            $product->featured_img3 = $fileName3;
+        }
+        if($request->featured_img4){
+            $product->featured_img4 = $fileName4;
+        }
         $product->save();
         return redirect()->route('admin.home');
     }
@@ -64,12 +91,31 @@ class Zeeners extends Controller
             'details'=>'required|max:100',
             'price'=>'required',
             'description'=>'required',
-            'featured_img'=>'nullable|mimes:jpg,jpeg,png|max:2048'
+            'featured_img'=>'nullable|mimes:jpg,jpeg,png|max:2048',
+            'featured_img2'=>'mimes:jpg,jpeg,png|max:2048',
+            'featured_img3'=>'mimes:jpg,jpeg,png|max:2048',
+            'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
         if($request->featured_img){
             $fileName = time().'png';
             $request->file('featured_img')->storeAs('public/product', $fileName);
         }
+
+        if($request->featured_img2){
+            $fileName = time().'png';
+            $request->file('featured_img2')->storeAs('public/product', $fileName2);
+        }
+
+        if($request->featured_img3){
+            $fileName = time().'png';
+            $request->file('featured_img3')->storeAs('public/product', $fileName3);
+        }
+
+        if($request->featured_img4){
+            $fileName = time().'png';
+            $request->file('featured_img4')->storeAs('public/product', $fileName4);
+        }
+        
         
         $product = Product::find($id);
         $product->name = $request->name;
@@ -81,6 +127,15 @@ class Zeeners extends Controller
         if($request->featured_img){
             $product->featured_img = $fileName;
         }
+        if($request->featured_img2){
+            $product->featured_img = $fileName2;
+        }
+        if($request->featured_img3){
+            $product->featured_img = $fileName3;
+        }
+        if($request->featured_img4){
+            $product->featured_img = $fileName4;
+        }
         $product->save();
         return redirect()->route('admin.home');        
     }
@@ -88,5 +143,6 @@ class Zeeners extends Controller
     public function destroy($id){
         $product = Product::find($id);
         $product->delete();
-        return redirect()->route('admin.home');    }
+        return redirect()->route('admin.home');
+    }
 }

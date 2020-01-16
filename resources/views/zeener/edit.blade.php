@@ -25,6 +25,13 @@
         <input type="number" name="price" value="{{ $product->price }}">
         <h3>Gambar</h3><br>
         <input type="file" name="featured_img" value="{{ $product->featured_img }}">     
+        Gambar Pendukung
+        <br>
+        <input type="file" name="featured_img2">
+        <br>
+        <input type="file" name="featured_img3">
+        <br>
+        <input type="file" name="featured_img4">     
         {{ csrf_field() }}   
         <input type="submit" name="submit" value="EDIT">
         <input type="hidden" name="_method" value="PUT">
