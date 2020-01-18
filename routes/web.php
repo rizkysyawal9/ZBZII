@@ -53,8 +53,13 @@ Route::group(['middleware'=>'admin'], function(){
     Route::post('/admin','Zeeners@store')->name('admin.store');
     Route::put('/admin/{id}', 'Zeeners@update')->name('admin.update');
     Route::delete('/admin/{id}','Zeeners@destroy')->name('admin.delete');
+    Route::put('/admin/{id}/update1', 'Zeeners@destroyImg2')->name('admin.del2');
+    Route::put('/admin/{id}/update2', 'Zeeners@destroyImg3')->name('admin.del3');
+    Route::put('/admin/{id}/update3', 'Zeeners@destroyImg4')->name('admin.del4');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -67,7 +72,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+Route::get('/image', 'imageController@index');
+Route::post('image-submit', 'imageController@store');
 /*Route::get('/zeener/create', 'Zeeners@create')->name('admin.create');
 Route::get('/zeener/{id}/edit', 'Zeeners@edit')->name('admin.edit');
 Route::post('/zeener','Zeeners@store')->name('admin.store');

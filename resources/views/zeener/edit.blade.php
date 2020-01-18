@@ -39,6 +39,31 @@
         <input type="submit" name="submit" value="EDIT">
         <input type="hidden" name="_method" value="PUT">
     </form>
+
+    <img src="{{ asset('storage/product/'. $product->featured_img2) }}" alt="" width="150">
+     <h1>Delete Image 2 </h1>
+    
+    <form action="{{ route('admin.del2', [ 'id' => $product->id ]) }}" method="post">
+        <input type="submit" name="submit" value="delete">
+            {{ csrf_field() }}
+        <input type="hidden" name="_method" value="PUT">
+      </form>
+      
+    <img src="{{ asset('storage/product/'. $product->featured_img3) }}" alt="" width="150">
+    <h1>Delete Image 3</h1>
+    <form action="{{ route('admin.del3', [ 'id' => $product->id ]) }}" method="post">
+        <input type="submit" name="submit" value="delete">
+            {{ csrf_field() }}
+        <input type="hidden" name="_method" value="PUT">
+    </form>
+    
+    <img src="{{ asset('storage/product/'. $product->featured_img4) }}" alt="" width="150">
+    <h1>Delete Image 4</h1>
+    <form action="{{ route('admin.del4', [ 'id' => $product->id ]) }}" method="post">
+        <input type="submit" name="submit" value="delete">
+            {{ csrf_field() }}
+        <input type="hidden" name="_method" value="PUT">     
+    </form>
 </body>
 </html>
 

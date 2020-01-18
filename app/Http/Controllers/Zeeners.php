@@ -32,21 +32,20 @@ class Zeeners extends Controller
         ]);
 
         $fileName = time().'img1';
-        $fileName2 = time().'img2';
-        $fileName3 = time().'img3';
-        $fileName4 = time().'img4';
-
         $request->file('featured_img')->storeAs('public/product', $fileName);
 
-        if($request->file('featured_img2')){
+        if($request->hasFile('featured_img2')){
+            $fileName2 = time().'img2';
             $request->file('featured_img2')->storeAs('public/product', $fileName2);
         }
 
-        if($request->file('featured_img3')){
+        if($request->hasFile('featured_img3')){
+            $fileName3 = time().'img3';
             $request->file('featured_img3')->storeAs('public/product', $fileName3);
         }
 
-        if($request->file('featured_img4')){
+        if($request->hasFile('featured_img4')){
+            $fileName4 = time().'img4';
             $request->file('featured_img4')->storeAs('public/product', $fileName4);
         }
         $product = new Product;
@@ -90,28 +89,28 @@ class Zeeners extends Controller
             'details'=>'required|max:100',
             'price'=>'required',
             'description'=>'required',
-            'featured_img'=>'nullable|mimes:jpg,jpeg,png|max:2048',
+            'featured_img'=>'mimes:jpg,jpeg,png|max:2048',
             'featured_img2'=>'mimes:jpg,jpeg,png|max:2048',
             'featured_img3'=>'mimes:jpg,jpeg,png|max:2048',
             'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
-        if($request->file('featured_img')){
+
+        if($request->hasFile('featured_img')){
             $fileName = time().'img1';
             $request->file('featured_img')->storeAs('public/product', $fileName);
         }
-
         
-        if($request->file('featured_img2')){
-            $fileName2 = time().'img2';
+        if($request->hasFile('featured_img2')){
+            $fileName2 = 'img2';
             $request->file('featured_img2')->storeAs('public/product', $fileName2);
         }
 
-        if($request->file('featured_img3')){
+        if($request->hasFile('featured_img3')){
             $fileName3 = time().'img3';
             $request->file('featured_img3')->storeAs('public/product', $fileName3);
         }
 
-        if($request->file('featured_img4')){
+        if($request->hasFile('featured_img4')){
             $fileName4 = time().'img4';
             $request->file('featured_img4')->storeAs('public/product', $fileName4);
         }
@@ -124,17 +123,17 @@ class Zeeners extends Controller
         $product->type = $request->type;
         $product->price = $request->price;
 
-        if($request->featured_img){
+        if($request->hasFile('featured_img')){
             $product->featured_img = $fileName;
         }
-        if($request->featured_img2){
-            $product->featured_img = $fileName2;
+        if($request->hasFile('featured_img2')){
+            $product->featured_img2 = $fileName2;
         }
-        if($request->featured_img3){
-            $product->featured_img = $fileName3;
+        if($request->hasFile('featured_img3')){
+            $product->featured_img3 = $fileName3;
         }
-        if($request->featured_img4){
-            $product->featured_img = $fileName4;
+        if($request->hasFile('featured_img4')){
+            $product->featured_img4 = $fileName4;
         }
         $product->save();
         return redirect()->route('admin.home');        
@@ -144,5 +143,26 @@ class Zeeners extends Controller
         $product = Product::find($id);
         $product->delete();
         return redirect()->route('admin.home');
+    }
+
+    public function destroyImg2($id){
+        $product = Product::find($id);
+        $product->featured_img2 = null;
+        $product->save();
+        return redirect()->route('admin.edit',['id'=> $id]);        
+
+    }
+    public function destroyImg3($id){
+        $product = Product::find($id);
+        $product->featured_img3 = null;
+        $product->save();       
+         return redirect()->route('admin.edit',['id'=> $id]);  ; 
+    }
+
+    public function destroyImg4($id){
+        $product = Product::find($id);
+        $product->featured_img4 = null;
+        $product->save();
+        return redirect()->route('admin.edit',['id'=> $id]);   
     }
 }
