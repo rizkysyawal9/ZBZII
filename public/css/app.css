@@ -2898,6 +2898,34 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #3490dc;
   border-color: #3490dc;
+  margin: 20px;
+}
+
+.btn_5 {
+  display: inline-block;
+  padding: 6px 20px;
+  background-color: #c5c3c3;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: capitalize;
+  color: black;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.btn_5:hover {
+  background-color: #7a7575;
+  color: black;
+}
+
+.container{
+  margin-bottom: 20px;
+}
+
+.edit-gambar{
+  display: flexbox;
 }
 
 .btn-primary:hover {

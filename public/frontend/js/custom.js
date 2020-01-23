@@ -1,18 +1,18 @@
 (function ($) {
   "use strict";
 
-  $( document ).ready(function() {
-    $("#search_input_box").hide();
-    $("#search_1").on('click', function(){
-        $("#search_input_box").slideToggle('500');
-        $("#search_input").focus();
-    });
-  });
-  $(document).ready(function(){
-      $("#close_search").on('click', function(){
-          $("#search_input_box").slideUp('500');
-      });
-  });
+  // $( document ).ready(function() {
+  //   $("#search_input_box").hide();
+  //   $("#search_1").on('click', function(){
+  //       $("#search_input_box").slideToggle('500');
+  //       $("#search_input").focus();
+  //   });
+  // });
+  // $(document).ready(function(){
+  //     $("#close_search").on('click', function(){
+  //         $("#search_input_box").slideUp('500');
+  //     });
+  // });
   $(document).ready(function(){
       $()
       $("#menu-icon").on('click', function(){
