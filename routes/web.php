@@ -15,6 +15,14 @@ Auth::routes();
 
 //Route untuk view halaman Utama
 Route::get('/', 'PageController@home')->name('home');
+Route::get('/mail', function(){
+    $to_name="rizky syawal";
+    $to_email="rizky.syawal9@gmail.com";
+    $data=array("name"=>"Joseph Joestar", "body"=>"Test Mail");
+    Mail::send('mail', $data, function($message) use ($to_name, $to_email){
+        $message->to($to_email)->subject('Lara Mail Subject');
+    });
+});
 Route::post('/', 'CheckoutController@store')->name('checkout.store');
 
 //Route untuk View Kategori Produk
