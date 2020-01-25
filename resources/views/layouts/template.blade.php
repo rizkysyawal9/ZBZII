@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{asset('/frontend')}}/css/style.css"> 
     <link rel="stylesheet" href="{{asset('/frontend')}}/css/menu.css"> 
    <link rel="stylesheet" href="{{asset('/frontend')}}/css/nice-select.css">
+   <link rel="stylesheet" href="{{asset('/frontend')}}/css/lightslider.min.css">
 
     <!-- jquery plugins here -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1994,6 +1994,17 @@ pre code {
   border-bottom: 2px solid #dee2e6;
 }
 
+.table thead th:last-child {
+  text-align: center;
+}
+
+.table tbody th:last-child {
+  text-align: center;
+}
+.table tbody th{
+  font-weight: normal;
+}
+
 .table tbody + tbody {
   border-top: 2px solid #dee2e6;
 }

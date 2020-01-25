@@ -32,9 +32,9 @@
       <div class="row s_product_inner">
         <div class="col-lg-5">
           <div class="product_slider_img">
-            <div id="lSSlideOuter">
-              <div class="lSSlideWrapper usingCss" style="transition-duration: 600ms; transition-timing-function: ease">
-                <div id="vertical" class="lightSliderIsGrab lSSlide" style="width: 2040px; height: 580px; padding-bottom: 0%; transform: tranlate3d(-1530px, 0px, 0px);">
+            <div id="vertical">
+              <div class="lSSlideWrapper usingCss">
+                <div id="vertical" class="lightSliderIsGrab lSSlide">
                   <div data-thumb="img/product_details/prodect_details_1.png">
                   <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="" width="400">
                   </div>
