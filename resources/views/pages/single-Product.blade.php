@@ -33,22 +33,29 @@
         <div class="col-lg-5">
           <div class="product_slider_img">
             <div id="vertical">
-              <div class="lSSlideWrapper usingCss">
-                <div id="vertical" class="lightSliderIsGrab lSSlide">
-                  <div data-thumb="img/product_details/prodect_details_1.png">
-                  <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="" width="400">
-                  </div>
-                  </div>
+              <div class="product-section-image">
+                <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" class="active" id="currentImage" width="400">
+              </div>
+              <div class="product-section-images">
+                <div class="product-section-thumbnail selected">
+                  <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" width="95">
+                </div>
+                <div class="product-section-thumbnail">
                   @if($products->featured_img2)
-                  <img src="{{ asset('storage/product/'. $products->featured_img2) }}" alt="" width="100">
-                  @endif
-                  @if($products->featured_img3)
-                  <img src="{{ asset('storage/product/'. $products->featured_img3) }}" alt="" width="100">
-                  @endif
-                  @if($products->featured_img4)
-                  <img src="{{ asset('storage/product/'. $products->featured_img4) }}" alt="" width="100">
+                  <img src="{{ asset('storage/product/'. $products->featured_img2) }}" alt="product" width="95">
                   @endif
                 </div>
+                <div class="product-section-thumbnail">
+                  @if($products->featured_img3)
+                  <img src="{{ asset('storage/product/'. $products->featured_img3) }}" alt="product" width="95">
+                  @endif
+                </div>
+                <div class="product-section-thumbnail">
+                  @if($products->featured_img4)
+                  <img src="{{ asset('storage/product/'. $products->featured_img4) }}" alt="product" width="95">
+                  @endif
+                </div>
+              </div>
               </div>
             </div>
           </div>
