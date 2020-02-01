@@ -34,9 +34,12 @@ class CheckoutController extends Controller
             'first'=> 'required',
             'last'=>'required',
             'number'=>'required',
-            'add1'=>'required',
-            'add2'=>'required',
-            'city'=>'required',
+            'alamat'=>'required',
+            'rtw'=>'required',
+            'kelurahan'=>'required',
+            'kecamatan'=>'required',
+            'kota'=>'required',
+            'provinsi'=>'required',
             'zip'=>'required'
         ]);
 
@@ -44,9 +47,12 @@ class CheckoutController extends Controller
         $form->first = $request->first;
         $form->last = $request->last;
         $form->number = $request->number;
-        $form->add1 = $request->add1;
-        $form->add2 = $request->add2;
-        $form->city = $request->city;
+        $form->alamat = $request->alamat;
+        $form->rtw = $request->rtw;
+        $form->kelurahan= $request->kelurahan;
+        $form->kecamatan = $request->kecamatan;
+        $form->kota = $request->kota;
+        $form->provinsi = $request->provinsi;
         $form->zip = $request->zip;
         $form->save();
         $sub = str_replace(',', '', Cart::subtotal()) + 10000;

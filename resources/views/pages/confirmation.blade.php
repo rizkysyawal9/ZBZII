@@ -46,16 +46,13 @@
                     <h4>shipping Address</h4>
                     <ul>
                         <li>
-                            <p>Street</p><span>: {{ $form->add1 }} {{$form->add2}} </span>
+                            <p>Alamat Lengkap</p><span>: {{ $form->alamat }} </span>
                         </li>
                         <li>
-                            <p>city</p><span>: {{ $form->city }}</span>
+                            <p>Kota</p><span>: {{ $form->kota }}</span>
                         </li>
                         <li>
-                            <p>country</p><span>: United States</span>
-                        </li>
-                        <li>
-                            <p>postcode</p><span>: {{ $form->zip }}</span>
+                            <p>Provinsi</p><span>: {{ $form->provinsi }}</span>
                         </li>
                     </ul>
                 </div>

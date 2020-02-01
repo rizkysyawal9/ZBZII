@@ -18,11 +18,13 @@ class CreateFormsTable extends Migration
             $table->string('first');
             $table->string('last');
             $table->integer('number');
-            $table->string('add1');
-            $table->string('add2');
-            $table->string('city');
-            $table->string('district')->nullable();
-            $table->integer('zip')->nullable();
+            $table->string('alamat');
+            $table->integer('rtw');
+            $table->string('kelurahan');
+            $table->string('kecamatan');
+            $table->string('kota');
+            $table->string('provinsi');
+            $table->integer('zip');
             $table->timestamps();
         });
     }

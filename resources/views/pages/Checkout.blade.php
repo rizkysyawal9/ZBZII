@@ -49,40 +49,49 @@
                   </div>
                   <!-- Alamat Lengkap -->
                   <div class="col-md-12 form-group p_star">
-                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat Lengkap" ></textarea>
+                    <textarea type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat Lengkap" value="{{ old('alamat') }}" ></textarea>
+                    @if($errors->has('alamat'))
+                    <p>{{ $errors->first('alamat') }}</p>
+                    @endif
                   </div>
                   <!-- RT/RW -->
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control"  placeholder="RT/RW"/>
+                    <input type="number" class="form-control"  name="rtw" placeholder="RT/RW" value="{{ old('rtw') }}"/>
+                    @if($errors->has('rtw'))
+                    <p>{{ $errors->first('rtw')}}</p>
+                    @endif
                   </div>
                   <!-- Kelurahan -->
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="add1" name="add1" value="{{ old('add1') }}" placeholder="Kelurahan"/>
-                    @if($errors->has('add1'))
-                    <p>{{ $errors->first('add1') }}</p>
+                    <input type="text" class="form-control" id="kelurahan" name="kelurahan" value="{{ old('kelurahan') }}" placeholder="Kelurahan"/>
+                    @if($errors->has('kelurahan'))
+                    <p>{{ $errors->first('kelurahan') }}</p>
                     @endif
                   </div>
                   <!-- Kecamatan -->
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="add2" name="add2" value="{{ old('add2') }}" placeholder="Kecamatan" />
-                    @if($errors->has('add2'))
-                    <p>{{ $errors->first('add2') }}</p>
+                    <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="{{ old('kecamatan') }}" placeholder="Kecamatan" />
+                    @if($errors->has('kecamatan'))
+                    <p>{{ $errors->first('kecamatan') }}</p>
                     @endif
                   </div>
                   <!-- Kota -->
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" placeholder="Kota/Kabupaten" />
+                    <input type="text" class="form-control" id="kota" name="kota" value="{{ old('kota') }}" placeholder="Kota/Kabupaten" />
+                    @if($errors->has('kota'))
+                    <p>{{ $errors->first('kota') }}</p>
+                    @endif
                   </div>
                   <!-- Provinsi -->
                   <div class="col-md-6 form-group p_star">
-                    <input type="text" class="form-control" placeholder="Provinsi"/>
-                    @if($errors->has('city'))
-                    <p>{{ $errors->first('city') }}</p>
+                    <input type="text" class="form-control" id="provinsi" name="provinsi" placeholder="Provinsi" value="{{ old('provinsi') }}"/>
+                    @if($errors->has('provinsi'))
+                    <p>{{ $errors->first('provinsi') }}</p>
                     @endif
                   </div>
                   <!-- post code -->
                   <div class="col-md-6 form-group">
-                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Kode Pos" value="{{ old('zip') }}" />
+                    <input type="number" class="form-control" id="zip" name="zip" placeholder="Kode Pos" value="{{ old('zip') }}" />
                     @if($errors->has('zip'))
                     <p>{{ $errors->first('zip') }}</p>
                     @endif
