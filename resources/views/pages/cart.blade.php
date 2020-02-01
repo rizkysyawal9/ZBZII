@@ -91,7 +91,7 @@
             </table>
 
           <div class="checkout_btn_inner float-right">
-            <a class="btn_1" href="{{ route('daily.index') }}">Continue Shopping</a>
+            <a class="btn_1" href="/">Continue Shopping</a>
             <a class="btn_1 checkout_btn_1" href="{{ route('checkout.index') }}">Proceed to checkout</a>
           </div>
           

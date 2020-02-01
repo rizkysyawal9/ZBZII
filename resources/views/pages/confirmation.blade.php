@@ -59,8 +59,16 @@
             </div>
             <div class="col-lg-12">
                 <div class="confirmation_tittle">
-                <span>Terimakasih. Pesanan anda telah diterima. Tolong lakukan pembayaran sebelum pukul 16.00 WIB</span>
+                <span>Terimakasih. Pesanan anda telah diterima. Tolong lakukan pembayaran sebelum pukul 16.00 WIB.</span>
+                <br>
+                <span>Tolong Screenchot halaman ini kemudian klik tombol dibawah untuk mengirim hasil screenshot sebagai konfirmasi pembelian.</span> 
                 </div>
+            </div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4 justify-content-center float-right">
+            <button class="btn_1">
+                <a href="https://api.whatsapp.com/send?phone=6287843337726&source=&data=">Konfirmasi Pembelian</a>
+            </button>
             </div>
       </div>
     </div>
