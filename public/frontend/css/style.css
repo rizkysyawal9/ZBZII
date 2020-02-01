@@ -2672,7 +2672,7 @@ ul {
 .banner_part {
   position: relative;
   background-color: #dde5e8;
-  background-image: url("../img/banner_img.png");
+  background-image: url("../img/banner_img.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
