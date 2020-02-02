@@ -1,6 +1,8 @@
 @extends('layouts.template')
 
-@section('title', '{{ $products->name }}')
+@section('title')
+<title>Zeen by Zi | {{$products->name}} </title>
+@endsection
 
 @section('breadcrumb')
     <!-- breadcrumb start-->
@@ -34,11 +36,14 @@
           <div class="product_slider_img">
             <div id="vertical">
               <div class="product-section-image">
-                <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" class="active" id="currentImage" width="400">
+                <img src="{{ url('uploads/'.$products->featured_img) }}" alt="{{$products->featured_img}}" class="active" id="currentImage" width="400">
+      
+                <!-- <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" class="active" id="currentImage" width="400"> -->
               </div>
               <div class="product-section-images">
                 <div class="product-section-thumbnail selected">
-                  <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" width="95">
+                  <!-- <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" width="95"> -->
+                  
                 </div>
                 <div class="product-section-thumbnail">
                   @if($products->featured_img2)

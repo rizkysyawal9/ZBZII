@@ -1,6 +1,9 @@
 @extends('layouts.template')
 
-@section('title', 'Checkout')
+@section('title')
+<title>Zeen by Zi | Checkout </title>
+@endsection
+
 
 @section('breadcrumb')
     <!-- breadcrumb start-->

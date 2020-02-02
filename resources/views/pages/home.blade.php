@@ -1,6 +1,8 @@
 @extends('layouts.template')
 
-@section('title', 'Home')
+@section('title')
+<title>Zeen by Zi | Home </title>
+@endsection
 
 @section('banner')
     <!-- banner part start-->
@@ -33,10 +35,6 @@
             <div class="container">
                 <h1 class="text-center">New Arrival</h1>
                 <p class="section-description text-center">Produk terbaru minggu ini.</p>
-                <!-- <div class="text-center button-container">
-                    <a href="#" class="btn_1">Featured</a>
-                    <a href="#" class="btn_1">On Sale</a>
-                </div> -->
                 <div class="products text-center">
                     @foreach ($products as $product)
                         <div class="single_category_product">

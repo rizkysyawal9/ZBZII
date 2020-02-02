@@ -1,6 +1,8 @@
 @extends('layouts.template')
 
-@section('title', '{{ $category }}')
+@section('title')
+<title>Zeen by Zi | {{$category}} </title>
+@endsection
 
 @section('breadcrumb')  
     <!-- breadcrumb start-->
@@ -40,7 +42,8 @@
                             <div class="single_category_product">
                                 <div class="single_category_img">
                                 <a href="/{{ $product->type }}/{{ $product->slug }}">
-                                <img src="{{ asset('storage/product/'. $product->featured_img) }}" alt="" width="150" href="/single-product">
+                                <!-- <img src="{{ asset('storage/product/'. $product->featured_img) }}" alt="" width="150" href="/single-product"> -->
+                                <img src="{{ url('uploads/'.$product->featured_img) }}" alt="{{$product->featured_img}}" width="150" href="/single-product">
                                 </a>
                                   <!--  <img src="img/blazer-product.jpg"  alt="">-->
                 

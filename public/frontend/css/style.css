@@ -241,6 +241,10 @@ h2,
   color: white !important;
 }
 
+.error-maggage {
+  color: red !important;
+}
+
 /**************** common css start ****************/
 /* line 4, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_common.scss */
 body {
@@ -270,7 +274,7 @@ input:focus {
 
 /* line 25, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_common.scss */
 .section_padding {
-  padding: 140px 0px;
+  padding: 100px 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -3093,7 +3097,8 @@ ul {
 
 /* line 119, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product_list.scss */
 .single_category_product img {
-  width: 100%;
+  width:340px;
+  height: 467.05px;
 }
 
 /* line 122, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product_list.scss */
@@ -3728,51 +3733,6 @@ ul {
 /* Single Product Area css
 ============================================================================================ */
 /* line 603, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_img .carousel {
-  position: relative;
-}
-
-/* line 606, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_img .carousel .carousel-indicators {
-  margin: 0px;
-  right: 20px;
-  width: auto;
-  left: auto;
-  bottom: 30px;
-}
-
-/* line 613, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_img .carousel .carousel-indicators li {
-  height: 60px;
-  width: 60px;
-  background: transparent;
-  text-indent: 0;
-  margin-right: 10px;
-  position: relative;
-}
-
-/* line 621, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_img .carousel .carousel-indicators li:after {
-  display: none;
-}
-
-/* line 625, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_img .carousel .carousel-indicators li:before {
-  content: "";
-  background: rgba(197, 50, 45, 0.8);
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 637, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
-.s_product_img .carousel .carousel-indicators li.active:before {
-  opacity: 1;
-}
-
 @media (max-width: 576px) {
   /* line 646, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
   .s_product_text {
@@ -3860,6 +3820,7 @@ ul {
   padding-top: 20px;
   border-top: 1px dotted #d5d5d5;
   margin: 20px 0;
+  width: 370px;
 }
 
 /* line 738, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */

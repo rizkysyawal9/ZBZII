@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+
 
 
 use App\Type;
@@ -26,28 +28,44 @@ class Zeeners extends Controller
             'price'=>'required',
             'description'=>'required',
             'featured_img'=>'mimes:jpg,jpeg,png|max:2048',
-            'featured_img2'=>'mimes:jpg,jpeg,png|max:2048',
-            'featured_img3'=>'mimes:jpg,jpeg,png|max:2048',
-            'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
+            // 'featured_img2'=>'mimes:jpg,jpeg,png|max:2048',
+            // 'featured_img3'=>'mimes:jpg,jpeg,png|max:2048',
+            // 'featured_img4'=>'mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        $fileName = time().'img1';
-        $request->file('featured_img')->storeAs('public/product', $fileName);
+        // $fileName = time().'img1';
+        $image = $request->file('featured_img');
+        $extention = $image->getClientOriginalExtension();
+       // $request->file('featured_img')->storeAs('public/product', $fileName);
+        Storage::disk('public')->put($image->getFilename().'.'.$extention, File::get($image));
 
-        if($request->hasFile('featured_img2')){
-            $fileName2 = time().'img2';
-            $request->file('featured_img2')->storeAs('public/product', $fileName2);
-        }
+        // if($request->hasFile('featured_img2')){
+        //     $image2 = $request->file('featured_img2');
+        //     $extention2 = $image2->getClientOriginalExtension();
+        //     Storage::disk('public')->put($image2->getFilename().'.'.$extention2, File::get($image2));
+        // }
 
-        if($request->hasFile('featured_img3')){
-            $fileName3 = time().'img3';
-            $request->file('featured_img3')->storeAs('public/product', $fileName3);
-        }
+        // if($request->hasFile('featured_img3')){
+        //     $image3 = $request->file('featured_img3');
+        //     $extention3 = $image3->getClientOriginalExtension();
+        //     Storage::disk('public')->put($image->getFilename().'.'.$extention, File::get($image3));
+        // }
 
-        if($request->hasFile('featured_img4')){
-            $fileName4 = time().'img4';
-            $request->file('featured_img4')->storeAs('public/product', $fileName4);
-        }
+        // if($request->hasFile('featured_img4')){
+        //     $image4 = $request->file('featured_img4');
+        //     $extention4 = $image4->getClientOriginalExtension();
+        //     Storage::disk('public')->put($image->getFilename().'.'.$extention, File::get($image4));
+        // }
+
+        // if($request->hasFile('featured_img3')){
+        //     $fileName3 = time().'img3';
+        //     $request->file('featured_img3')->storeAs('public/product', $fileName3);
+        // }
+
+        // if($request->hasFile('featured_img4')){
+        //     $fileName4 = time().'img4';
+        //     $request->file('featured_img4')->storeAs('public/product', $fileName4);
+        // }
         $product = new Product;
         $product->name = $request->name;
         $product->slug = $request->name . $product->id;
@@ -55,18 +73,24 @@ class Zeeners extends Controller
         $product->description = $request->description;
         $product->type = $request->type;
         $product->price = $request->price;
-        $product->featured_img = $fileName;
+        $product->featured_img = $image->getFilename().'.'.$extention;
+        $product->mime = $image->getClientMimeType();
+        $product->original_filename = $image->getClientOriginalName();
+        
 
-        if($request->featured_img2){
-            $product->featured_img2 = $fileName2;
-        }
-        if($request->featured_img3){
-            $product->featured_img3 = $fileName3;
-        }
-        if($request->featured_img4){
-            $product->featured_img4 = $fileName4;
-        }
+        //  if($request->featured_img2){
+        //     $product->featured_img2 = $image2->getFilename().'.'.$extention2;
+        //     $product->mime = $image2->getClientMimeType();
+        //     $product->original_filename = $image2->getClientOriginalName();
+        //  }
+        // if($request->featured_img3){
+        //     $product->featured_img3 = $fileName3;
+        // }
+        // if($request->featured_img4){
+        //     $product->featured_img4 = $fileName4;
+        // }
         $product->save();
+        dd('$product->featured_img');
         return redirect()->route('admin.home');
     }
 

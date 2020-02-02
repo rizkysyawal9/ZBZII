@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->text('description');
             $table->string('featured_img')->nullable();
+            $table->string('mime')->nullable();
+            $table->string('original_filename')->nullable();
             $table->string('featured_img2')->nullable();
             $table->string('featured_img3')->nullable();
             $table->string('featured_img4')->nullable();
