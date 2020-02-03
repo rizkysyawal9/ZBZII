@@ -49,7 +49,8 @@
                   <div class="media">
                     <div class="d-flex">
                        <a href="/{{ $item->model->type }}/{{ $item->model->slug }}">
-                       <img src="{{ asset('storage/product/'. $item->model->featured_img) }}" alt="" width="150">
+                       <!-- <img src="{{ asset('storage/product/'. $item->model->featured_img) }}" alt="" width="150"> -->
+                       <img src="{{ url('uploads/'.$item->model->featured_img) }}" alt="{{$item->model->featured_img}}" width="150">
                      <!--  <img src="{{asset('/frontend')}}/img/arrivel/arrivel_1.png" alt="" />--></a>
                     </div>
                     <div class="media-body">

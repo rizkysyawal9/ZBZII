@@ -26,8 +26,14 @@ class CreateProductsTable extends Migration
             $table->string('mime')->nullable();
             $table->string('original_filename')->nullable();
             $table->string('featured_img2')->nullable();
+            $table->string('mime2')->nullable();
+            $table->string('original_filename2')->nullable();
             $table->string('featured_img3')->nullable();
+            $table->string('mime3')->nullable();
+            $table->string('original_filename3')->nullable();
             $table->string('featured_img4')->nullable();
+            $table->string('mime4')->nullable();
+            $table->string('original_filename4')->nullable();
             $table->timestamps();
         });
     }

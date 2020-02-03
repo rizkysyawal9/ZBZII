@@ -119,8 +119,6 @@
                             <th> <span>@currency($item->price)</span></th>
                           </tr>
                           @endforeach
-                        </tbody>
-                        <tfoot>
                           <tr class="tr-list">
                             <th scope="col" colspan="5">Subtotal</th>
                             <th scope="col" ></th>
@@ -131,6 +129,8 @@
                             <th scope="col" ></th>
                             <th scope="col">Flat rate: @currency($rate)</th>
                           </tr>
+                        </tbody>
+                        <tfoot>
                           <tr class="tr-list">
                             <th scope="col" colspan="5">Total</th>
                             <th scope="col" ></th>

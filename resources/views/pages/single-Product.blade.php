@@ -42,22 +42,26 @@
               </div>
               <div class="product-section-images">
                 <div class="product-section-thumbnail selected">
+                <img src="{{ url('uploads/'.$products->featured_img) }}" alt="{{$products->featured_img2}}" width="95">
                   <!-- <img src="{{ asset('storage/product/'. $products->featured_img) }}" alt="product" width="95"> -->
                   
                 </div>
                 <div class="product-section-thumbnail">
                   @if($products->featured_img2)
-                  <img src="{{ asset('storage/product/'. $products->featured_img2) }}" alt="product" width="95">
+                  <img src="{{ url('uploads/'.$products->featured_img2) }}" alt="{{$products->featured_img3}}" width="95"">
+                  <!-- <img src="{{ asset('storage/product/'. $products->featured_img2) }}" alt="product" width="95"> -->
                   @endif
                 </div>
                 <div class="product-section-thumbnail">
                   @if($products->featured_img3)
-                  <img src="{{ asset('storage/product/'. $products->featured_img3) }}" alt="product" width="95">
+                  <img src="{{ url('uploads/'.$products->featured_img3) }}" alt="{{$products->featured_img}}" width="95">
+                  <!-- <img src="{{ asset('storage/product/'. $products->featured_img3) }}" alt="product" width="95"> -->
                   @endif
                 </div>
                 <div class="product-section-thumbnail">
                   @if($products->featured_img4)
-                  <img src="{{ asset('storage/product/'. $products->featured_img4) }}" alt="product" width="95">
+                  <img src="{{ url('uploads/'.$products->featured_img4) }}" alt="{{$products->featured_img}}" width="95">
+                  <!-- <img src="{{ asset('storage/product/'. $products->featured_img4) }}" alt="product" width="95"> -->
                   @endif
                 </div>
               </div>

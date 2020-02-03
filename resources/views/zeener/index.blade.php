@@ -22,7 +22,11 @@
                             <tbody>
                                 @foreach($products as $product)
                                 <tr class="tr-list">
-                                    <th colspan="5"><img src="{{ asset('storage/product/'. $product->featured_img) }}" alt="" width="150"></th>
+                                    <th colspan="5">
+                                        <img src="{{ url('uploads/'.$product->featured_img) }}" alt="{{$product->featured_img}}" width="150">
+
+                                        <!-- <img src="{{ asset('storage/product/'. $product->featured_img) }}" alt="" width="150"> -->
+                                    </th>
                                     <th >{{ $product->name }}</th>
                                     <th > @currency($product->price)</th>
                                     <th colspan="5">

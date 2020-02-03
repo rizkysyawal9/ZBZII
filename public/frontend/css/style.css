@@ -761,11 +761,6 @@ ul {
   transition: 0.5s;
 }
 
-/* line 19, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_button.scss */
-.submit_btn:hover {
-  background: transparent;
-}
-
 /* line 24, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_button.scss */
 .btn_1 {
   display: inline-block;
@@ -778,6 +773,11 @@ ul {
   text-transform: capitalize;
   color: #fff;
   margin: 15px;
+}
+
+.confirmation_part .btn_1:hover{
+  background-color: black !important;
+  color: #fff !important;
 }
 
 .btn_5 {

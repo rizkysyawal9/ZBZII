@@ -32,16 +32,22 @@
               <div class="single_confirmation_details">
                   <h4>order info</h4>
                   <ul>
-                      <li>
-                          <p>Total</p><span>: @currency($sub)</span>
-                        </li>
-                        <li>
-                            <p>Metode Pembayaran</p><span>: Transfer</span>
-                        </li>
-                        <li>
-                            <p>Rekening Pembayaran</p><span>: BCA 2312451345 <br> ( Salsabilah )</span>
-                        </li>
-                    </ul>
+                    <li><p>Nama Barang</p>
+                        @foreach(Cart::content() as $item)
+                            <span>: {{ $item->name }} <span>x {{ $item ->qty}} </span> </span> 
+                            <br>    
+                        @endforeach
+                    </li>
+                    <li>
+                        <p>Total</p><span>: @currency($sub)</span>
+                    </li>
+                    <li>
+                        <p>Metode Pembayaran</p><span>: Transfer</span>
+                    </li>
+                    <li>
+                        <p>Rekening Pembayaran</p><span>: BCA 2312451345 <br> ( Salsabilah )</span>
+                    </li>
+                  </ul>
                 </div>
             </div>
             <div class="col-lg-6 col-lx-4">

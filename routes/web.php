@@ -55,7 +55,7 @@ Route::get('/confirmation', 'PageController@confirmation')->name('confirmation')
 Route::get('/about', 'PageController@about')->name('about');
 
 Route::group(['middleware'=>'admin'], function(){
-    Route::get('/admin', 'Zeeners@index')->name('admin.home');
+    Route::get('/admin', 'Zeeners@index')->name('admin.index');
     Route::get('/admin/create', 'Zeeners@create')->name('admin.create');
     Route::get('/admin/{id}/edit', 'Zeeners@edit')->name('admin.edit');
     Route::post('/admin','Zeeners@store')->name('admin.store');
