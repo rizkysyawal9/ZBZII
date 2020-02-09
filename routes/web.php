@@ -46,7 +46,6 @@ Route::get('/empty', function(){
 });
 
 
-
 //Route For Admin 
 Route::get('/zeener','Zeeners@index');
 
@@ -64,6 +63,8 @@ Route::group(['middleware'=>'admin'], function(){
     Route::put('/admin/{id}/update1', 'Zeeners@destroyImg2')->name('admin.del2');
     Route::put('/admin/{id}/update2', 'Zeeners@destroyImg3')->name('admin.del3');
     Route::put('/admin/{id}/update3', 'Zeeners@destroyImg4')->name('admin.del4');
+    Route::get('/admin/orders', 'Zeeners@showOrders')->name('admin.orders');
+    Route::get('/admin/singleorder', 'Zeeners@showSingleOrders')->name('admin.orders');
 });
 
 
@@ -82,21 +83,3 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/image', 'imageController@index');
 Route::post('image-submit', 'imageController@store');
-/*Route::get('/zeener/create', 'Zeeners@create')->name('admin.create');
-Route::get('/zeener/{id}/edit', 'Zeeners@edit')->name('admin.edit');
-Route::post('/zeener','Zeeners@store')->name('admin.store');
-Route::put('/zeener/{id}', 'Zeeners@update')->name('admin.update');
-Route::delete('/zeener/{id}','Zeeners@destroy')->name('admin.delete');*/
-
-//Route::get('/single-product', 'PageController@single_product');
-/*Route::get('/cart', 'PageController@cart')->name('cart');*/
-// admin functionality
-/*Route::GET('admin/dashboard', 'AdminController@dashboard');
-Route::GET('admin/logout', 'Admin\LoginController@logout');
-Route::GET('admin', 'Admin\LoginController@showLoginForm')->name('admin.login');
-Route::POST('admin', 'Admin\LoginController@login');*/
-
-
-//Route::get('/ProductType', 'PageController@ProductType')->name('ProductType');
-//Route::get('/{type}', 'PageController@category');
-

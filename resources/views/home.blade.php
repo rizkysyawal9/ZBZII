@@ -16,6 +16,7 @@
                     @endif
                     Selamat Datang, {{ Auth::user()->name }}<br><br>
                     <a class="btn btn-primary" href="{{ route('admin.index') }}">Semua Produk</a>
+                    <a class="btn btn-primary" href="{{ route('admin.orders') }}">Semua Order</a>
                     <a class="btn btn-secondary" href="{{ route('admin.create') }}">Tambah Produk</a>
 
                 </div>
