@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\File;
 
 use App\Type;
 use App\Product;
+use App\Order;
+use App\Form;
+
 class Zeeners extends Controller
 {
     public function index(){
@@ -109,6 +112,11 @@ class Zeeners extends Controller
 
     public function show($id){
 
+    }
+
+    public function showOrders(){
+        $order = Form::orderBy('updated_at','desc')->paginate(10);
+        return view('/zeener/orders',['orders'=> $order]);
     }
 
     public function edit($id){

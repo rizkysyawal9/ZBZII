@@ -8,6 +8,7 @@ use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use App\Form;
+use App\Order;
 use App\Mail\FormPosted;
 use Illuminate\Support\Facades\Mail;
 
@@ -57,6 +58,16 @@ class CheckoutController extends Controller
         $form->save();
         $sub = str_replace(',', '', Cart::subtotal()) + 10000;
         //Mail::to('test@gmail.com')->send(new FormPosted($form));
+        
+        foreach(Cart::content() as $item){
+            Order::create([
+                'order_id' => $form->id,
+                'product_id'=> $item->model->id,
+                'quantity'=> $item->qty,
+                'price' => $item->model->price * $item->qty,
+            ]);
+        }
+
         return view('pages/confirmation')->with([
             'form'=> $form,
             'sub' => $sub,
