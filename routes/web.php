@@ -65,7 +65,7 @@ Route::group(['middleware'=>'admin'], function(){
     Route::put('/admin/{id}/update2', 'Zeeners@destroyImg3')->name('admin.del3');
     Route::put('/admin/{id}/update3', 'Zeeners@destroyImg4')->name('admin.del4');
     Route::get('/admin/orders', 'Zeeners@showOrders')->name('admin.orders');
-    Route::get('/admin/singleorder', 'Zeeners@showSingleOrders')->name('admin.orders');
+    Route::get('/admin/orders/{id}', 'Zeeners@showSingleOrders')->name('admin.details');
 });
 
 

@@ -134,13 +134,13 @@ h2,
   padding: 50px 0;
 }
 
-/*@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .featured-section .products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 60px 30px;
   }
-}*/
+}
 
 .featured-section .products .product-price {
   color: #919191 !important;

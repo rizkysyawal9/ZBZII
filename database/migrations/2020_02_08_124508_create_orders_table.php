@@ -16,11 +16,9 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('order_id')->unsigned()->nullable();
-            $table->foreign('order_id')->references('id')
-                    ->on('forms')->onUpdate('cascade')->onDelete('set null');
+            $table->foreign('order_id')->references('id')->on('forms')->onDelete('cascade');
             $table->integer('product_id')->unsigned()->nullable();
-            $table->foreign('product_id')->references('id')
-                ->on('products')->onUpdate('cascade')->onDelete('set null');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->integer('quantity')->unsigned();  
             $table->integer('price')->unsigned();                          
             $table->timestamps();

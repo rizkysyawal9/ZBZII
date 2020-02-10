@@ -110,8 +110,24 @@ class Zeeners extends Controller
         return redirect()->route('admin.index');
     }
 
-    public function show($id){
+    public function showSingleOrders($id){
+        $order = Order::where('order_id',$id)->get();
+        // dd($order);
+        // $product = new stdClass();
 
+        $produk = [];
+
+        foreach($order as $or){
+            $product = Product::where('id', $or->product_id)->first();
+            array_push($produk, $product);
+            // dump($produk);
+        }
+
+        // dump($produk);
+        // $product = Product::find($order->product_id);
+        // dd($product);
+        return view('/zeener/orderDetails', ['order'=>$produk]);
+        // dd("success");
     }
 
     public function showOrders(){

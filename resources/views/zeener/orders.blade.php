@@ -24,7 +24,7 @@
                                     <th >{{ $order->first }} {{ $order->last }}</th>
                                     <th>
                                     <button class="btn_5">
-                                            <a href="{{ route('admin.edit', [ 'id' => $order->id ]) }}">Detail</a></li><br>
+                                            <a href="{{ route('admin.details', [ 'id' => $order->id ]) }}">Detail</a></li><br>
                                         </button>
                                         <form  action="{{ route('admin.delete', [ 'id' => $order->id ]) }}" method="post">
                                             <input class="btn_5" type="submit" name="submit" value="delete">
