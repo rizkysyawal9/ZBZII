@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- css files -->
-    <link rel="stylesheet" href="{{asset('/frontend')}}/css/animate.css">
     <link rel="stylesheet" href="{{asset('/frontend')}}/css/all.css">
     <link rel="stylesheet" href="{{asset('/frontend')}}/css/themify-icons.css">
     <link rel="stylesheet" href="{{asset('/frontend')}}/css/style.css"> 
@@ -103,7 +102,6 @@
                         <h4>Company</h4>
                         <ul class="list-unstyled">
                             <li><a href="/about">About</a></li>
-                            <li><a href="/about">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
