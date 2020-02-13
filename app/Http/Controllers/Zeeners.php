@@ -106,27 +106,34 @@ class Zeeners extends Controller
         //     $product->featured_img4 = $fileName4;
         // }
         $product->save();
-        dd('success');
         return redirect()->route('admin.index');
     }
 
     public function showSingleOrders($id){
         $order = Order::where('order_id',$id)->get();
+        $form = Form::where('id', $id)->get()->first();
         // dd($order);
         // $product = new stdClass();
 
         $produk = [];
+        $jumlah = [];
 
         foreach($order as $or){
             $product = Product::where('id', $or->product_id)->first();
+            $quantity = $or->quantity;
             array_push($produk, $product);
+            array_push($jumlah, $quantity);
             // dump($produk);
         }
 
         // dump($produk);
         // $product = Product::find($order->product_id);
         // dd($product);
-        return view('/zeener/orderDetails', ['order'=>$produk]);
+        return view('/zeener/orderDetails', [
+            'product'=>$produk, 
+            'qty' => $jumlah,
+            'form' => $form
+            ]);
         // dd("success");
     }
 
