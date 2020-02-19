@@ -59,3 +59,15 @@ Link website: www.zeenbyzi.com
 
 ### Shopping Cart 
 ![Four](https://i.ibb.co/XZKK5Cg/Screen-Shot-2020-02-20-at-01-10-21.png)
+
+### Customer Details
+![Five](https://i.ibb.co/wcffwD6/Screen-Shot-2020-02-20-at-01-15-43.png)
+
+### Billing Details
+![Six](https://i.ibb.co/nzMJvWF/Screen-Shot-2020-02-20-at-01-20-00.png)
+
+### Admin Panel No.1
+![Seven](https://i.ibb.co/vvxTTK2/Screen-Shot-2020-02-20-at-01-21-11.png)
+
+### Admin Panel No.2
+![Eight](https://i.ibb.co/PxVzypq/Screen-Shot-2020-02-20-at-01-23-44.png)
