@@ -6,7 +6,6 @@ Projek tersebut dibuat untuk seorang client yang menjual Hijab online. Framework
  
 - Yasmin Lukman (Frontend Developer) 
 - Rizky Syawal (Backend Developer)
-- Wanda Azizah (UI/UX)
 
 ### Step-by-Step:
 
