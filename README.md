@@ -2,11 +2,6 @@
 
 Projek tersebut dibuat untuk seorang client yang menjual Hijab online. Framework yang digunakan untuk projek ini adalah Laravel 6.
 
-### Contributors:
- 
-- Yasmin Lukman (Frontend Developer) 
-- Rizky Syawal (Backend Developer)
-
 ### Step-by-Step:
 
 1. Jalankan kode tersebut di terminal jika ingin menjalankan website ini di localhost
